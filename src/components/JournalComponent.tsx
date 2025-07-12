@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { supabase } from '../lib/supabase';
+// import { supabase } from '../lib/supabase';
 
 type Journal = {
   id: number;
@@ -10,40 +10,41 @@ type Journal = {
 
 export default function JournalComponent() {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<Journal[]>([]);
+  // const [data, setData] = useState<Journal[]>([]);
+  // const [error, setError] = useState<string | null>(null);
+  const [data, setData] = useState([
+    { id: 1, created_at: '2024-07-06', name: 'Test Journal Entry 1' },
+    { id: 2, created_at: '2024-07-05', name: 'Test Journal Entry 2' },
+  ]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetchData();
+    // fetchData();
+    setLoading(false);
   }, []);
 
-  async function fetchData() {
-    try {
-      setLoading(true);
-      
-      // This is an example query - you'll need to replace 'example_table'
-      // with your actual table name once you've set up Supabase
-      const { data, error } = await supabase
-        .from('journals')
-        .select('*');
-        
-      if (error) {
-        throw error;
-      }
-      
-      if (data) {
-        setData(data);
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError('An unexpected error occurred');
-      }
-    } finally {
-      setLoading(false);
-    }
-  }
+  // async function fetchData() {
+  //   try {
+  //     setLoading(true);
+  //     const { data, error } = await supabase
+  //       .from('journals')
+  //       .select('*');
+  //     if (error) {
+  //       throw error;
+  //     }
+  //     if (data) {
+  //       setData(data);
+  //     }
+  //   } catch (error) {
+  //     if (error instanceof Error) {
+  //       setError(error.message);
+  //     } else {
+  //       setError('An unexpected error occurred');
+  //     }
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }
 
   return (
     <View style={styles.container}>
