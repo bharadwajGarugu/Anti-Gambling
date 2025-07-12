@@ -18,8 +18,7 @@
 - **Self-Blocking:** Add apps to your avoidance list and track usage.
 - **Gamification:** Earn badges and celebrate your progress.
 - **Success Stories:** Read and share recovery journeys.
-- **Motivational Quotes:** Daily affirmations and inspiration.
-- **Donate:** Support the mission via QR code.
+
 
 ---
 
@@ -65,8 +64,6 @@ The APK will be at `android/app/build/outputs/apk/release/app-release.apk`.
 You can upload the generated APK to:
 - [APKPure](https://apkpure.com/)
 - [Aptoide](https://www.aptoide.com/)
-- [Uptodown](https://en.uptodown.com/android)
-- [Huawei AppGallery](https://developer.huawei.com/consumer/en/doc/distribution/app/agc-help-upload-apk-0000001053628147)
 
 ---
 
